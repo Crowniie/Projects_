@@ -1,0 +1,1 @@
+The objective of this project is generating an API using springboot and vaadin to fetch weather data for a specific area and have it displayed.
