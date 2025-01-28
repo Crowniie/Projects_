@@ -11,7 +11,7 @@ public class WeatherService{
 
     public WeatherService(WebClient.Builder webClientBuilder){
         this.webClient = webClientBuilder.baseUrl("https://api.openweathermap.org/data/2.5").build();
-        this.gson =  new Gson();
+        this.gson = new Gson();
     }
 
     public String getWeather(String city){
