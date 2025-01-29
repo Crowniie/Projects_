@@ -13,6 +13,9 @@ import org.springframework.web.bind.annotation.RestController;
 import com.google.gson.Gson;
 import org.springframework.web.reactive.function.client.WebClient;
 import org.springframework.beans.factory.annotation.Autowired;
+import java.lang.reflect.Type;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 
 
 
@@ -22,8 +25,9 @@ public class Controller {
     private WebClient.Builder webClientBuilder;
     @GetMapping("/weather")
     public String SendWeather(){
+        Gson gson = new Gson();
         WeatherService service = new WeatherService(webClientBuilder);
-        
-        return ; 
+        String response = service.getWeather("London");
+        return response; 
     }
 }
